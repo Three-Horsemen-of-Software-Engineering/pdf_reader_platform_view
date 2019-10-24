@@ -1,0 +1,8 @@
+// This is a generated file; do not edit or check into version control.
+FLUTTER_ROOT=/Users/andriimazepa/Documents/flutter
+FLUTTER_APPLICATION_PATH=/Users/andriimazepa/IdeaProjects/pdf_reader_platform_view/example
+FLUTTER_TARGET=/Users/andriimazepa/IdeaProjects/pdf_reader_platform_view/example/lib/main.dart
+FLUTTER_BUILD_DIR=build
+SYMROOT=${SOURCE_ROOT}/../build/ios
+FLUTTER_FRAMEWORK_DIR=/Users/andriimazepa/Documents/flutter/bin/cache/artifacts/engine/ios
+TRACK_WIDGET_CREATION=true

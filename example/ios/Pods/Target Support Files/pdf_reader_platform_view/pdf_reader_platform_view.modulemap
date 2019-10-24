@@ -1,0 +1,6 @@
+framework module pdf_reader_platform_view {
+  umbrella header "pdf_reader_platform_view-umbrella.h"
+
+  export *
+  module * { export * }
+}

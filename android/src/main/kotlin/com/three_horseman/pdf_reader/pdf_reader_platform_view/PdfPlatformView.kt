@@ -14,8 +14,8 @@ open class PdfPlatformView(private val context: Context?, private val path: Stri
 
     override fun getView(): View {
         val webView = WebView(context)
-        webView.loadUrl(path)
         webView.settings.javaScriptEnabled = true
+        webView.loadUrl(path)
         val pdfView = PDFView(context, null)
         val file = File(path)
         pdfView.fromFile(file)

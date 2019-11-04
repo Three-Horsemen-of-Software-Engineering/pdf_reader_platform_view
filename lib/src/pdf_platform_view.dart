@@ -16,16 +16,11 @@ class PdfPlatformView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (Platform.isAndroid) {
-      return GestureDetector(
-        onHorizontalDragDown: (_) {},
-        onHorizontalDragUpdate: (_) {},
-        onHorizontalDragEnd: (_) {},
-        child: AndroidView(
-          viewType: "pdf_reader_platform_view",
-          creationParams: <String, String>{"path": path},
-          creationParamsCodec: StandardMessageCodec(),
-          gestureRecognizers: this.gestureRecognizers,
-        ),
+      return AndroidView(
+        viewType: "pdf_reader_platform_view",
+        creationParams: <String, String>{"path": path},
+        creationParamsCodec: StandardMessageCodec(),
+        gestureRecognizers: this.gestureRecognizers,
       );
     } else {
       throw UnimplementedError("Ios is not implemented");

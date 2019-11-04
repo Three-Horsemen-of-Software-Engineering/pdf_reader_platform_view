@@ -11,7 +11,7 @@ class PdfReaderPlatformViewPlugin : MethodCallHandler {
     companion object {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
-            registrar.platformViewRegistry().registerViewFactory("pdf_reader_platform_view", PdfPlatformViewFactory())
+            registrar.platformViewRegistry().registerViewFactory("pdf_reader_platform_view/reader", PdfPlatformViewFactory())
             val channel = MethodChannel(registrar.messenger(), "pdf_reader_platform_view")
             channel.setMethodCallHandler(PdfReaderPlatformViewPlugin())
         }

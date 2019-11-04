@@ -17,7 +17,7 @@ class PdfPlatformView extends StatelessWidget {
   Widget build(BuildContext context) {
     if (Platform.isAndroid) {
       return AndroidView(
-        viewType: "pdf_reader_platform_view",
+        viewType: "pdf_reader_platform_view/reader",
         creationParams: <String, String>{"path": path},
         creationParamsCodec: StandardMessageCodec(),
         gestureRecognizers: this.gestureRecognizers,

@@ -7,8 +7,10 @@ import 'package:flutter/services.dart';
 
 class PdfPlatformView extends StatelessWidget {
   final String path;
+  final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
 
-  const PdfPlatformView({@required this.path, Key key}) : super(key: key);
+  const PdfPlatformView({@required this.path, Key key, this.gestureRecognizers})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

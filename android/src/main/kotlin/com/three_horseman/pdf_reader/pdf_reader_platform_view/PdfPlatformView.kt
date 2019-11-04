@@ -13,8 +13,7 @@ open class PdfPlatformView(private val context: Context?, private val path: Stri
 
     override fun getView(): View {
         val pdfView = PDFView(context, null)
-        val file = File(path)
-        pdfView.fromFile(file)
+        pdfView.fromFile(File(path))
                 .enableSwipe(true)
                 .swipeHorizontal(false)
                 .enableDoubletap(true)

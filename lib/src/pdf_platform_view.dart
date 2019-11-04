@@ -9,7 +9,8 @@ class PdfPlatformView extends StatelessWidget {
   final String path;
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
 
-  const PdfPlatformView({@required this.path, Key key, this.gestureRecognizers})
+  const PdfPlatformView(
+      {@required this.path, Key key, @required this.gestureRecognizers})
       : super(key: key);
 
   @override
@@ -23,11 +24,7 @@ class PdfPlatformView extends StatelessWidget {
           viewType: "pdf_reader_platform_view",
           creationParams: <String, String>{"path": path},
           creationParamsCodec: StandardMessageCodec(),
-          gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
-            new Factory<OneSequenceGestureRecognizer>(
-              () => new EagerGestureRecognizer(),
-            ),
-          ].toSet(),
+          gestureRecognizers: this.gestureRecognizers,
         ),
       );
     } else {

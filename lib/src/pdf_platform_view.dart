@@ -22,6 +22,7 @@ class PdfPlatformView extends StatelessWidget {
         creationParams: <String, String>{"path": path},
         creationParamsCodec: StandardMessageCodec(),
         gestureRecognizers: this.gestureRecognizers,
+        onPlatformViewCreated: (int code)=> print("view built with code $code"),
         hitTestBehavior: PlatformViewHitTestBehavior.translucent,
       );
     } else {

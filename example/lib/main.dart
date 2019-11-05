@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(child: PdfPlatformView(path: null,)),
+        body: Center(child: PdfPlatformView(path: null,gestureRecognizers: null,)),
       ),
     );
   }

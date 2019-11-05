@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 class PdfPlatformView extends StatelessWidget {
@@ -21,6 +22,7 @@ class PdfPlatformView extends StatelessWidget {
         creationParams: <String, String>{"path": path},
         creationParamsCodec: StandardMessageCodec(),
         gestureRecognizers: this.gestureRecognizers,
+        hitTestBehavior: PlatformViewHitTestBehavior.translucent,
       );
     } else {
       throw UnimplementedError("Ios is not implemented");

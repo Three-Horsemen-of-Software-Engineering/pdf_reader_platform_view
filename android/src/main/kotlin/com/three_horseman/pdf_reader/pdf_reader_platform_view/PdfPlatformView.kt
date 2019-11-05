@@ -8,16 +8,15 @@ import java.io.File
 
 open class PdfPlatformView(private val context: Context?, private val path: String) : PlatformView {
     override fun dispose() {
-        return
     }
 
     override fun getView(): View {
-        val pdfView = PDFView(context, null)
-        pdfView.fromFile(File(path))
-                .enableSwipe(true)
-                .swipeHorizontal(false)
-                .enableDoubletap(true)
-                .defaultPage(0).load()
-        return pdfView
+        return PDFView(context, null).apply {
+            fromFile(File(path))
+                    .enableSwipe(true)
+                    .swipeHorizontal(false)
+                    .enableDoubletap(true)
+                    .defaultPage(0).load()
+        }
     }
 }

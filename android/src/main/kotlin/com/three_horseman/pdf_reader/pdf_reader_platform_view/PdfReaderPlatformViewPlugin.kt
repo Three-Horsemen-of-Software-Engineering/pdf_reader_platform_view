@@ -11,7 +11,7 @@ class PdfReaderPlatformViewPlugin : MethodCallHandler {
     companion object {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
-            registrar.platformViewRegistry().registerViewFactory("pdf_reader_platform_view/reader", PdfPlatformViewFactory())
+            registrar.platformViewRegistry().registerViewFactory("pdf_reader_platform_view", PdfPlatformViewFactory())
         }
     }
 
